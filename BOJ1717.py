@@ -1,3 +1,7 @@
+import sys
+input = sys.stdin.readline
+sys.setrecursionlimit(10**7)
+
 n, m = map(int, input().split())
 mySet = list(range(n+1))
 
@@ -27,8 +31,4 @@ for i in range(m):
     if(c == 0):
         mySet = unionParent(mySet, a, b)
     else :
-        if(getParent(list, a) == getParent(list, b)):
-            print("YES")
-        else :
-            print("NO")
-        
+        isSame(mySet, a, b)
